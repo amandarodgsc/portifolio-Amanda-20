@@ -1,0 +1,97 @@
+.sobre-mim {
+  max-width: 1200px;
+  width: 100%;
+  display: grid;
+  grid-template-areas:
+    'tittle tittle'
+    'description skills';
+  grid-template-rows: auto 1fr;
+  grid-template-columns: 1fr 1fr;
+  gap: 64px;
+}
+
+.description {
+  grid-area: description;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.description__tittle {
+  font-size: 48px;
+  color: var(--primary-color);
+}
+
+.description__text {
+  font-size: 1.5rem;
+  width: 85%;
+  line-height: 150%;
+}
+
+.skills {
+  grid-area: skills;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.skills__tittle {
+  font-size: 48px;
+  color: var(--primary-color);
+}
+
+.skills__container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.skills__icon {
+  width: 150px;
+  height: 150px;
+  background-color: var(--icon-color);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+}
+
+.skills__icon i {
+  font-size: 3rem;
+}
+
+.skills__icon span {
+  font-weight: 700;
+  font-size: 1.5rem;
+}
+
+/* Regra de mídia consulta para telas menores que 768px (tablets e smartphones) */
+@media screen and (max-width: 768px) {
+  .sobre-mim {
+    grid-template-columns: 1fr; /* Altera para uma única coluna */
+    gap: 32px; /* Reduz o espaçamento entre as áreas */
+  }
+
+  .description__tittle,
+  .skills__tittle {
+    font-size: 36px; /* Reduz o tamanho do título */
+  }
+
+  .description__text {
+    font-size: 1.2rem; /* Reduz o tamanho do texto */
+  }
+
+  .skills__icon {
+    width: 120px; /* Reduz o tamanho do ícone */
+    height: 120px;
+  }
+
+  .skills__icon i {
+    font-size: 2.5rem; /* Reduz o tamanho do ícone */
+  }
+
+  .skills__icon span {
+    font-size: 1.2rem; /* Reduz o tamanho do texto */
+  }
+}

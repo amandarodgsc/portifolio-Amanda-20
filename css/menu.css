@@ -1,0 +1,26 @@
+/* Estilos padrão */
+.menu {
+  display: flex;
+  gap: 50px; /* Redução do espaçamento entre os itens do menu para telas menores */
+  font-size: 1rem; /* Redução do tamanho da fonte para telas menores */
+  color: #7779;
+}
+
+.menu li {
+  border-bottom: 2px solid transparent;
+  transition: all 0.5s;
+}
+
+.menu li:hover {
+  border-color: var(--primary-color);
+  color: #fff;
+}
+
+/* Regra de mídia consulta para telas menores que 768px (tablets e smartphones) */
+@media screen and (max-width: 768px) {
+  .menu {
+    flex-direction: row; /* Empilhar os itens do menu verticalmente */
+    gap: 10px; /* Redução do espaçamento entre os itens do menu */
+    font-size: 0.9rem; /* Redução adicional do tamanho da fonte */
+  }
+}

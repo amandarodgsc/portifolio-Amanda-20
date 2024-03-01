@@ -1,0 +1,121 @@
+@media (max-width: 640px) {
+  body {
+    width: 100%;
+  }
+
+  footer {
+    font-size: 0.75rem;
+  }
+
+  .copy-name {
+    font-size: 0.75rem;
+  }
+
+  header {
+    max-width: 400px;
+    width: 100%;
+    justify-content: space-between;
+    padding-left: 16px; /* Redução do padding */
+    padding-right: 16px; /* Redução do padding */
+  }
+
+  .logo {
+    display: none;
+  }
+
+  header::before {
+    content: '</>';
+    font-size: 1.5rem; /* Redução do tamanho do ícone */
+    color: var(--primary-color);
+  }
+
+  .home {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    justify-content: space-around;
+    padding-top: 32px; /* Redução do padding */
+    padding-bottom: 32px; /* Adição de padding */
+    width: 100%;
+    height: auto; /* Alteração para altura automática */
+  }
+
+  .profile__text {
+    font-size: 1.25rem; /* Redução do tamanho do texto */
+  }
+
+  .profile__name {
+    font-size: 2.5rem; /* Redução do tamanho do nome */
+  }
+
+  .profile__foto {
+    width: 70vw;
+    height: fit-content; /* Ajuste automático da altura */
+  }
+
+  .section__tittle {
+    font-size: 3rem; /* Redução do tamanho do título */
+  }
+
+  .description__tittle {
+    font-size: 2.5rem; /* Redução do tamanho do título */
+    text-align: center;
+  }
+
+  .description__text {
+    text-align: justify;
+    width: 80vw;
+    font-size: 1rem; /* Redução do tamanho do texto */
+  }
+
+  .skills__tittle {
+    font-size: 2.5rem; /* Redução do tamanho do título */
+    text-align: center;
+  }
+
+  .sobre-mim {
+    height: auto; /* Alteração para altura automática */
+    display: flex;
+    width: 100vw;
+    align-items: center;
+    flex-direction: column; /* Alteração para empilhar os elementos verticalmente */
+    gap: 32px; /* Redução do espaçamento entre os elementos */
+    padding: 0;
+  }
+
+  .skills__container {
+    justify-content: center;
+  }
+
+  .projetos {
+    height: auto; /* Alteração para altura automática */
+    display: flex;
+    flex-direction: column; /* Alteração para empilhar os elementos verticalmente */
+    align-items: center; /* Centraliza os itens horizontalmente */
+  }
+
+  .card-container {
+    display: flex;
+    flex-direction: column; /* Alteração para empilhar os cards verticalmente */
+    align-items: center; /* Centraliza os itens horizontalmente */
+  }
+
+  .card-container img {
+    width: 100%; /* Ajuste para preencher a largura do contêiner */
+    height: auto; /* Ajuste automático da altura */
+    max-width: 300px; /* Limita a largura máxima */
+  }
+
+  h2 {
+    display: flex;
+    justify-content: center;
+  }
+
+  .contatos {
+    height: auto; /* Alteração para altura automática */
+  }
+
+  .social-container {
+    flex-direction: column;
+  }
+}

@@ -1,0 +1,85 @@
+/* Estilos padrão */
+.home {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/1231630/stars.png);
+  background-repeat: repeat;
+  background-size: cover;
+  box-shadow: inset 0px -40px 40px #000;
+}
+
+.home::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/1231630/stars.png);
+  background-repeat: repeat;
+  background-size: cover;
+  animation: twinkle 3s infinite alternate; /* Definindo a animação de brilho */
+}
+
+.profile__foto {
+  filter: brightness(70%);
+  border: 5px solid var(--primary-color);
+  border-radius: 50%;
+}
+
+.profile {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.profile__text {
+  font-size: 1.5rem;
+}
+
+.profile__name {
+  font-size: 4rem;
+  color: var(--primary-color);
+}
+
+@keyframes twinkle {
+  0% {
+    filter: brightness(10%); /* Define o brilho inicial */
+  }
+  50% {
+    filter: brightness(200%); /* Define o brilho máximo */
+  }
+  100% {
+    filter: brightness(10%); /* Define o brilho de volta ao valor inicial */
+  }
+}
+
+/* Regra de mídia consulta para telas menores que 768px (tablets e smartphones) */
+@media screen and (max-width: 768px) {
+  .profile {
+    flex-direction: column; /* Empilhar os elementos verticalmente */
+    text-align: center; /* Alinhar o texto ao centro */
+    gap: 10px; /* Ajustar o espaço entre os elementos */
+  }
+
+  .profile__foto {
+    width: 150px; /* Reduzir o tamanho da foto */
+    height: 150px;
+  }
+
+  .profile__name {
+    font-size: 3rem; /* Reduzir o tamanho do nome */
+  }
+}
+
+/* Regra de mídia consulta para telas entre 768px e 1024px (tablets na horizontal) */
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  /* Adicionar estilos específicos, se necessário */
+}
+
+/* Regra de mídia consulta para telas maiores que 1024px (desktops) */
+@media screen and (min-width: 1024px) {
+  /* Adicionar estilos específicos, se necessário */
+}
